@@ -1,0 +1,8 @@
+# Ignore ENV Files
+*.env
+
+# Ignore Node Modules Folder
+node_modules/
+
+# Ignore Cookie File
+cookie.mjs
