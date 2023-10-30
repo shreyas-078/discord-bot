@@ -6,3 +6,6 @@ node_modules/
 
 # Ignore Cookie File
 cookie.mjs
+
+#Ignore .DS_Store Files
+.DS_Store
