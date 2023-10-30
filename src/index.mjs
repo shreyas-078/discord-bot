@@ -71,7 +71,7 @@ const helpEmbed = new EmbedBuilder()
     { name: "/help", value: "Displays this Embed" },
     {
       name: "/unclejoke",
-      value: "Returns a random Joke of Ferses Level Humor",
+      value: "Returns a random Uncle Joke",
     }, //inline: true makes the next field appear in the same line
     { name: "/play", value: "Play some music" },
     { name: "/skip", value: "Skip Current song" },
