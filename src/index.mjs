@@ -114,7 +114,7 @@ client.on("interactionCreate", async (interaction) => {
       interaction,
     });
     await interaction.reply({
-      content: `Searching for: ${query.toUpperCase()}`,
+      content: `Added to Queue: ${query.toUpperCase()}`,
     });
   }
 });
