@@ -75,7 +75,8 @@ const helpEmbed = new EmbedBuilder()
     }, //inline: true makes the next field appear in the same line
     { name: "/play", value: "Play some music" },
     { name: "/skip", value: "Skip Current song" },
-    { name: "/stop", value: "Stop music" }
+    { name: "/stop", value: "Stop music" },
+    { name: "/leave", value: "Leave the voice Channel" }
     // { name: "\u200B", value: "\u200B" } Leaves Space
   );
 
