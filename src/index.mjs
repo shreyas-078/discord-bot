@@ -42,15 +42,9 @@ const rest = new REST({ version: "10" }).setToken(
 //Refresh all the (/) Commands
 try {
   console.log("Refreshing application (/) commands.");
-  await rest.put(
-    Routes.applicationGuildCommands(
-      process.env.CLIENT_ID,
-      process.env.GUILD_ID
-    ),
-    {
-      body: listOfCommands,
-    }
-  );
+  await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), {
+    body: listOfCommands,
+  });
 
   console.log("Successfully Reloaded Application (/) Commands.");
 } catch (error) {
