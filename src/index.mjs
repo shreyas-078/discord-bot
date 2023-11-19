@@ -15,7 +15,7 @@ import {
 
 const listOfCommands = commands;
 
-//Create a new Client
+// Create a new Client
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -34,12 +34,12 @@ client.DisTube = new DisTube(client, {
   plugins: [new YtDlpPlugin({ update: true })],
 });
 
-//New Discord REST API
+// New Discord REST API
 const rest = new REST({ version: "10" }).setToken(
   process.env.DISCORD_BOT_TOKEN
 );
 
-//Refresh all the (/) Commands
+// Refresh all the (/) Commands
 try {
   console.log("Refreshing application (/) commands.");
   await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), {
@@ -51,12 +51,12 @@ try {
   console.error(error);
 }
 
-//When Bot is Ready display text to show it
+// When Bot is Ready display text to show it
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-//Creating the help Embed using EmbedBuilder
+// Creating the help Embed using EmbedBuilder
 const helpEmbed = new EmbedBuilder()
   .setColor("Aqua")
   .setTitle("Cookie Bot Commands")
@@ -176,5 +176,5 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-//Log the bot in
+// Log the bot in
 client.login(process.env.DISCORD_BOT_TOKEN);
