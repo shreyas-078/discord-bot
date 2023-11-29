@@ -102,11 +102,18 @@ client.on("interactionCreate", async (interaction) => {
       await interaction.reply({ content: "User not in VC." });
       return;
     }
-    client.DisTube.play(interaction.member.voice.channel, query, {
-      member: interaction.member,
-      textChannel: interaction.channel,
-      interaction,
-    });
+    try {
+      client.DisTube.play(interaction.member.voice.channel, query, {
+        member: interaction.member,
+        textChannel: interaction.channel,
+        interaction,
+      });
+    } catch (Error) {
+      await interaction.reply({
+        content: `An Unknown Error Occured`,
+      });
+    }
+
     await interaction.reply({
       content: `Added to Queue: ${query.toUpperCase()}`,
     });
